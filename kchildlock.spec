@@ -11,12 +11,11 @@ Source0:	http://ufpr.dl.sourceforge.net/project/%{name}/%{name}/%{version}/%{nam
 # Patch 0 fix the hardcoded path for installing libs
 Patch0:		kchildlock-0.75.3-mdv-fix-cmake-install-path.patch
 # Patch 1 fix a wrong path in the desktop file for kcm
-Patch1:		kchildlock-0-75-2-mdv-fix-icon-path.patch
+Patch1:		kchildlock-0.75.3-mdv-fix-icon-path.patch
 License:	GPLv2
 Group:		Graphical desktop/KDE 
 URL:		http://kde-apps.org/content/show.php/KChildlock?content=88124
-BuildRequires:	kdebase4-workspace-devel	
-#Provides:	
+BuildRequires:	kdelibs4-devel	
 
 %description
 
