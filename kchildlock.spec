@@ -34,7 +34,7 @@ requires the KDE4 Desktop.
 %_kde_datadir/config/kchildlockrc
 %_kde_services/kcm_kchildlock.desktop
 %_kde_services/kded/kchildlockdaemon.desktop
-%_kde_datadir/doc/HTML/en/kcontrol/%{name}/
+%doc %_kde_docdir/HTML/en/kcontrol/%{name}
 
 #------------------------------------------------------------------------------
 
