@@ -1,15 +1,15 @@
 %define name	kchildlock
-%define version	 0.75.3
-%define release	%mkrel 2
+%define version	 0.75.4
+%define release	%mkrel 1
 %define Summary	 Tool to monitor and restrict time spend on computer by a children
 
 Summary:	%Summary
 Name:		%name
 Version:	%version
 Release:	%release
-Source0:	http://ufpr.dl.sourceforge.net/project/%{name}/%{name}/%{version}/%{name}-%{version}.tar.gz
+Source0:	http://ufpr.dl.sourceforge.net/project/%{name}/%{name}/%{version}/%{name}_%{version}.orig.tar.gz
 # Patch 0 fix the hardcoded path for installing libs
-Patch0:		kchildlock-0.75.3-mdv-fix-cmake-install-path.patch
+Patch0:		kchildlock-0.75.4-mdv-fix-cmake-install-path.patch
 # Patch 1 fix a wrong path in the desktop file for kcm
 Patch1:		kchildlock-0.75.3-mdv-fix-icon-path.patch
 Patch2:		kchildlock-0.75.3-drop-kworkspace.patch
