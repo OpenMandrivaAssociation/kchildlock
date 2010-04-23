@@ -1,6 +1,6 @@
 %define name	kchildlock
-%define version	 0.76.1
-%define release	%mkrel 2
+%define version	 0.76.2
+%define release	%mkrel 1
 %define Summary	 Tool to monitor and restrict time spend on computer by a children
 
 Summary:	%Summary
