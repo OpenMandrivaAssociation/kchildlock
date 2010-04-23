@@ -8,6 +8,7 @@ Name:		%name
 Version:	%version
 Release:	%release
 Source0:	http://ufpr.dl.sourceforge.net/project/%{name}/%{name}/%{version}/%{name}-%{version}.tar.gz
+Patch0:		kchildlock-0.76.2-fix-install.patch
 License:	GPLv2
 Group:		Graphical desktop/KDE 
 URL:		http://kde-apps.org/content/show.php/KChildlock?content=88124
@@ -29,12 +30,14 @@ requires the KDE4 Desktop.
 %_kde_datadir/config/kchildlockrc
 %_kde_services/kcm_kchildlock.desktop
 %_kde_services/kded/kchildlockdaemon.desktop
+%_var/opt/kchildlock/dummy.txt
 %doc %_kde_docdir/HTML/en/kcontrol/%{name}
 
 #------------------------------------------------------------------------------
 
 %prep
-%setup -q 
+%setup -q
+%patch0 -p0 -b .prefix
 
 %build
 %cmake_kde4
