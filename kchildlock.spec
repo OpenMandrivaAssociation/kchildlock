@@ -1,5 +1,5 @@
 %define name	kchildlock
-%define version	 0.76.2
+%define version	 0.76.3
 %define release	%mkrel 1
 %define Summary	 Tool to monitor and restrict time spend on computer by a children
 
@@ -8,7 +8,6 @@ Name:		%name
 Version:	%version
 Release:	%release
 Source0:	http://ufpr.dl.sourceforge.net/project/%{name}/%{name}/%{version}/%{name}-%{version}.tar.gz
-Patch0:		kchildlock-0.76.2-fix-install.patch
 License:	GPLv2
 Group:		Graphical desktop/KDE 
 URL:		http://kde-apps.org/content/show.php/KChildlock?content=88124
@@ -26,10 +25,10 @@ requires the KDE4 Desktop.
 %defattr(-,root,root)
 %_kde_libdir/kde4/kcm_kchildlock.so
 %_kde_libdir/kde4/kded_kchildlockdaemon.so
-%_kde_datadir/apps/%{name}/
 %_kde_datadir/config/kchildlockrc
 %_kde_services/kcm_kchildlock.desktop
 %_kde_services/kded/kchildlockdaemon.desktop
+%_kde_iconsdir/%name/icons/kchildlock.png
 %_var/opt/kchildlock/dummy.txt
 %doc %_kde_docdir/HTML/en/kcontrol/%{name}
 
@@ -37,7 +36,6 @@ requires the KDE4 Desktop.
 
 %prep
 %setup -q
-%patch0 -p0 -b .prefix
 
 %build
 %cmake_kde4
