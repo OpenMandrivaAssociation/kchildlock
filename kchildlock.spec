@@ -1,5 +1,5 @@
 %define name	kchildlock
-%define version	 0.80.2
+%define version	 0.90.1
 %define release	%mkrel 1
 %define Summary	 Tool to monitor and restrict time spend on computer by a children
 
@@ -29,8 +29,8 @@ requires the KDE4 Desktop.
 %_kde_datadir/config/kchildlockrc
 %_kde_services/kcm_kchildlock.desktop
 %_kde_services/kded/kchildlockdaemon.desktop
-%_kde_iconsdir/%name/icons/kchildlock.png
 %_var/opt/kchildlock/dummy.txt
+%_kde_iconsdir/hicolor/*/*/*
 %doc %_kde_docdir/HTML/en/kcontrol/%{name}
 
 #------------------------------------------------------------------------------
@@ -48,7 +48,6 @@ requires the KDE4 Desktop.
 %install
 %__rm -rf %buildroot
 %makeinstall_std -C build
-
 
 %find_lang %{name} 
 
