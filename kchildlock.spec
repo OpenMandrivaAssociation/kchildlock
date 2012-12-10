@@ -1,6 +1,6 @@
 Name:		kchildlock
-Version:	0.90.4
-Release:	%mkrel 1
+Version:0.90.4.2
+Release:	1
 Summary:	Tool to monitor and restrict time spend on computer by a children
 Source0:	http://ufpr.dl.sourceforge.net/project/%{name}/%{name}/%{version}/%{name}-%{version}.tar.gz
 License:	GPLv2
@@ -31,15 +31,14 @@ requires the KDE4 Desktop.
 %prep
 %setup -q
 
+
 %build
 %cmake_kde4
 %make
 
 %install
-%__rm -rf %{buildroot}
+
 %makeinstall_std -C build
 
 %find_lang %{name}
 
-%clean
-%__rm -rf %{buildroot}
