@@ -1,6 +1,6 @@
 Name:		kchildlock
 Version:0.90.4.2
-Release:	1
+Release:	2
 Summary:	Tool to monitor and restrict time spend on computer by a children
 Source0:	http://ufpr.dl.sourceforge.net/project/%{name}/%{name}/%{version}/%{name}-%{version}.tar.gz
 License:	GPLv2
